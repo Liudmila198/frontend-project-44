@@ -30,29 +30,16 @@ const calculateOperations = (operators, num1, num2) => {
   }
   return `${result}`;
 };
-  const getQuestionAndAnswer = () => {
-    const randomOperator = operators[getRandomNumber(0, 3)];
-    const num1 = getRandomNumber(0, 10);
-    const num2 = getRandomNumber(0, 10);
-    const anotherGameQuestion = `${num1} ${randomOperator} ${num2}`;
-    const expectedAnswer = calculateOperations(randomOperator, num1, num2);
-    return [anotherGameQuestion, expectedAnswer];
-  };
-  
-
   const calcGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
           //let randomNumber = getRandomNumber(1, 100);
-          console.log(
-            `"Question:" ${getQuestionAndAnswer()}` );
+          console.log(`"Question:" ${getQuestionAndAnswer()}`);
           const answer = readlineSync.question("Your answer: ");
           //let correctAnswer = calculateOperations(randomOperator, num1, num2);
           if (answer === getQuestionAndAnswer()) {
             console.log("Correct!");
           } else {
-            console.log(
-              `${answer} is wrong answer ;(. Correct answer was ${getQuestionAndAnswer()}`               //${correctAnswer}`
-            
+            console.log(`${answer} is wrong answer ;(. Correct answer was ${getQuestionAndAnswer()}`               //${correctAnswer}`
             )
             break;};
         }
