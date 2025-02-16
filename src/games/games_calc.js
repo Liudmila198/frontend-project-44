@@ -34,6 +34,7 @@ const getQuestionAndAnswer = () => {
   const randomOperator = operators[randomNumber(0, 3)];
   const num1 = randomNumber(0, 11);
   const num2 = randomNumber(0, 11);
+  console.log(111111, num1, num2)
   const anotherGameQuestion = `${num1} ${randomOperator} ${num2}`;
   const expectedAnswer = calculateOperations(randomOperator, num1, num2);
   return [anotherGameQuestion, expectedAnswer];
