@@ -42,7 +42,7 @@ const getQuestionAndAnswer = () => {
   const calcGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
           //let randomNumber = getRandomNumber(1, 100);
-          console.log(`"Question:" ${getQuestionAndAnswer()}`);
+          console.log(`"Question:" ${}`);
           const answer = readlineSync.question("Your answer: ");
           //let correctAnswer = calculateOperations(randomOperator, num1, num2);
           if (answer === getQuestionAndAnswer()) {
