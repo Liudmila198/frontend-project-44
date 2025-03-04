@@ -8,24 +8,16 @@ export const gamesCalc = () => {
   const randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
-
   console.log('What is the result of the expression?');
-
   const operators = ['+', '-', '*'];   
-  
   const calculateOperations = (operator, num1, num2) => {
-  //let result;
-    //console.log(444, operator, num1, num2);
     switch (operator) {
       case '+':
         return num1 + num2;
-    //console.log(333, result) 
       case '-':
         return num1 - num2;
-        //break;
       case '*':
         return num1 * num2;
-        //break;
       default:
         return NaN;
     }    
@@ -36,23 +28,23 @@ export const gamesCalc = () => {
     const num2 = randomNumber(0, 6);
     const anotherGameQuestion = `${num1} ${randomOperator} ${num2}`;
     const expectedAnswer = calculateOperations(randomOperator, num1, num2);
-console.log(55555, expectedAnswer);
     return [anotherGameQuestion, expectedAnswer];
-    
   };
   const calcGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
-          const questionA = getQuestionAndAnswer()[0];
-          const rightAnswer = getQuestionAndAnswer()[1];
-          console.log(`"Question:" ${questionA}`);
+         const [anotherGameQuestion, expectedAnswer] = getQuestionAndAnswer();
+         //console.log(111111, anotherGameQuestion, expectedAnswer)
+          console.log(`"Question:" ${anotherGameQuestion}`);
           const myAnswer = readlineSync.question("Your answer: " );
-              if (myAnswer === rightAnswer) {
+              if (myAnswer == expectedAnswer) {
                 console.log("Correct!");
               } else {
-                console.log(`${myAnswer} is wrong answer ; Correct answer was ${rightAnswer}`)
+                console.log(`${myAnswer} is wrong answer ; Correct answer was ${expectedAnswer}`)
                 break;};
             }
             console.log("Congratulation");
       };
   calcGame();
+
+
 };
