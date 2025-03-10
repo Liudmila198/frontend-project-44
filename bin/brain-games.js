@@ -5,7 +5,7 @@ console.log('Welcome to the Brain Games!');
 //var readlineSync = require('readline-sync');
 
 // Wait for user's response.
-var userName = readlineSync.question('May I have your name? ');
+const userName = readlineSync.question('May I have your name? ');
 console.log('Hello, ' + userName + '!');
 
 
