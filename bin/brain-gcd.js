@@ -3,6 +3,4 @@
  gamesGcd();
  
 
- export default () => {
-    run(description, generateRound);
-  };
+ 
