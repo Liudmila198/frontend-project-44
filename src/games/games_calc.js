@@ -39,10 +39,11 @@ export const gamesCalc = () => {
               if (myAnswer == expectedAnswer) {
                 console.log("Correct!");
               } else {
-                console.log(`${myAnswer} is wrong answer ; Correct answer was ${expectedAnswer}`)
-                break;};
+                console.log(`${myAnswer} is wrong answer ; Correct answer was ${expectedAnswer}.\nLet's try again, ${userName}!`)
+                  return;
+              };
             }
-            console.log("Congratulation");
+            console.log(`Congratulation, ${userName}!`);
       };
   calcGame();
 
