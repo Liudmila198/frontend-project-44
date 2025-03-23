@@ -26,7 +26,7 @@ export const gamesEven = () => {
         return;
       }
     }
-    console.log(`Congratulations, ${userName}`);
+    console.log(`Congratulations, ${userName}!`);
   }
   evenGame();
 }
