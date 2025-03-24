@@ -11,14 +11,21 @@ export const gamesEven = () => {
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-  const rightAnswer = (randomNumber) => (randomNumber % 2 === 0 ? "yes" : "no");
+  const isEven = (number) => (number % 2 === 0);
+  
+  const generateRound = () => {
+    const number = getRandomNumber(1, 100);
+    const question = number.toString();
+    const correctAnswer = isEven(number) ? 'yes' : 'no';
+    return [question, correctAnswer];
+  };
 
   const evenGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
-      let randomNumber = getRandomNumber(1, 100);
-      console.log("Question:" + " " + randomNumber);
+     const [question, correctAnswer] = generateRound();
+      console.log("Question:" + " " + question);
       const answer = readlineSync.question("Your answer: ");
-      let correctAnswer = rightAnswer(randomNumber);
+      //let correctAnswer = rightAnswer(question);
       if (answer === correctAnswer) {
         console.log("Correct!");
       } else {
@@ -27,6 +34,7 @@ export const gamesEven = () => {
       }
     console.log(`Congratulation, ${userName}!`);
   }
-  evenGame();
 }
+  evenGame();
+
 }
