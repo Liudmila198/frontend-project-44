@@ -1,15 +1,18 @@
 import readlineSync from "readline-sync";
+import { userName, getRandomNumber } from './index.js';
 export const gamesCalc = () => {
   console.log("Welcome to the Brain Games!");
 
-  let userName = readlineSync.question("May I have your name? ");
-  console.log("Hello, " + userName + "!");
+  // let userName = readlineSync.question("May I have your name? ");
+  // console.log("Hello, " + userName + "!");
 
-  const randomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
+  // const randomNumber = (min, max) => {
+  //   return Math.floor(Math.random() * (max - min + 1)) + min;
+  // };
   console.log('What is the result of the expression?');
+
   const operators = ['+', '-', '*'];   
+
   const calculateOperations = (operator, num1, num2) => {
     switch (operator) {
       case '+':
@@ -19,13 +22,15 @@ export const gamesCalc = () => {
       case '*':
         return num1 * num2;
       default:
-        return NaN;
+        return undefined
+      // default:
+      //   return NaN;
     }    
   };
   const getQuestionAndAnswer = () => {
-    const randomOperator = operators[randomNumber(0, 3)];
-    const num1 = randomNumber(6, 11);
-    const num2 = randomNumber(0, 6);
+    const randomOperator = operators[getRandomNumber(0, 3)];
+    const num1 = getRandomNumber(6, 11);
+    const num2 = getRandomNumber(0, 6);
     const anotherGameQuestion = `${num1} ${randomOperator} ${num2}`;
     const expectedAnswer = calculateOperations(randomOperator, num1, num2);
     return [anotherGameQuestion, expectedAnswer];
@@ -33,7 +38,6 @@ export const gamesCalc = () => {
   const calcGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
          const [anotherGameQuestion, expectedAnswer] = getQuestionAndAnswer();
-         //console.log(111111, anotherGameQuestion, expectedAnswer)
           console.log(`"Question:" ${anotherGameQuestion}`);
           const myAnswer = readlineSync.question("Your answer: " );
               if (myAnswer == expectedAnswer) {
