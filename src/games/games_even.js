@@ -33,8 +33,9 @@ export const gamesEven = () => {
         console.log(`Let's try again, ${userName}!`)
         return;
       }
+    }
     console.log(`Congratulations, ${userName}!`);
-  }
+  
 }
   evenGame();
 
