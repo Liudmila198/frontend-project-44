@@ -38,7 +38,7 @@ export const gamesCalc = () => {
   const calcGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
          const [question, expectedAnswer] = getQuestionAndAnswer();
-          console.log(`"Question:" ${question}`);
+          console.log(`Question: ${question}`);
           const myAnswer = readlineSync.question("Your answer: " );
               if (myAnswer == expectedAnswer) {
                 console.log("Correct!");
