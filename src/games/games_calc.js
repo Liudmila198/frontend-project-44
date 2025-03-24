@@ -1,16 +1,8 @@
 import readlineSync from "readline-sync";
 import { userName, getRandomNumber } from './index.js';
 export const gamesCalc = () => {
-  console.log("Welcome to the Brain Games!");
-
-  // let userName = readlineSync.question("May I have your name? ");
-  // console.log("Hello, " + userName + "!");
-
-  // const randomNumber = (min, max) => {
-  //   return Math.floor(Math.random() * (max - min + 1)) + min;
-  // };
   console.log('What is the result of the expression?');
-
+  
   const operators = ['+', '-', '*'];   
 
   const calculateOperations = (operator, num1, num2) => {
