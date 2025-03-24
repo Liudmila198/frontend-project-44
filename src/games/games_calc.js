@@ -2,9 +2,13 @@ import readlineSync from "readline-sync";
 import { userName, getRandomNumber } from './index.js';
 export const gamesCalc = () => {
   console.log('What is the result of the expression?');
-
-  const operators = ['+', '-', '*'];   
-
+  
+  const getRandomOperator = () => {
+    const operators = ['+', '-', '*'];
+    const randomOperator = Math.floor(Math.random() * operators.length);
+    const operator = operators[randomOperator];
+    return operator;
+  };
   const calculateOperations = (operator, num1, num2) => {
     let result;
     switch (operator) {
@@ -22,8 +26,9 @@ export const gamesCalc = () => {
     }
     return `${result}`;
   };
+
   const getQuestionAndAnswer = () => {
-    const randomOperator = operators[getRandomNumber(0, 3)];
+    const randomOperator = getRandomOperator();
     const num1 = getRandomNumber(6, 11);
     const num2 = getRandomNumber(0, 6);
     const question = `${num1} ${randomOperator} ${num2}`;
