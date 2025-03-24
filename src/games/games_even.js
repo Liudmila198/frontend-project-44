@@ -32,7 +32,7 @@ export const gamesEven = () => {
         console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
         return;
       }
-    console.log(`Congratulation, ${userName}!`);
+    console.log(`Congratulations, ${userName}!`);
   }
 }
   evenGame();
