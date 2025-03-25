@@ -1,4 +1,5 @@
 import readlineSync from "readline-sync";
+
 export const gamesEven = () => {
   console.log("Welcome to the Brain Games!");
 
