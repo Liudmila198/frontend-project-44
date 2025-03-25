@@ -1,5 +1,6 @@
 import readlineSync from "readline-sync";
 import { userName, getRandomNumber } from './index.js';
+
 export const gamesCalc = () => {
   console.log('What is the result of the expression?');
   
@@ -23,7 +24,7 @@ export const gamesCalc = () => {
         break;
       default:
         return undefined;
-    }
+    };
     return `${result}`;
   };
 
