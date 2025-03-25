@@ -23,7 +23,7 @@ export const gamesEven = () => {
   const evenGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
      const [question, correctAnswer] = generateRound();
-      console.log("Question:" + " " + question);
+      console.log(`Question: ${question}`);
       const answer = readlineSync.question("Your answer: ");
       //let correctAnswer = rightAnswer(question);
       if (answer === correctAnswer) {

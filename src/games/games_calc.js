@@ -47,7 +47,7 @@ export const gamesCalc = () => {
                   return;
               };
             }
-            console.log(`Congratulation, ${userName}!`);
+            console.log(`Congratulations, ${userName}!`);
       };
   calcGame();
 
