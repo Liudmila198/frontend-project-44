@@ -33,7 +33,8 @@ export const gamesGcd = () => {
                 } else {
                   console.log(`"${myAnswer}" is wrong answer ;(. Correct answer was "${expectedAnswer}".`)
                   console.log(`Let's try again, ${userName}!`)
-                  break;};
+                  return;
+                };
               }
               console.log(`Congratulations, ${userName}!`);
         };
