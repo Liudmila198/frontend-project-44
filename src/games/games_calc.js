@@ -1,11 +1,11 @@
-import readlineSync from "readline-sync";
-import { userName, getRandomNumber } from "./index.js";
+import readlineSync from 'readline-sync';
+import { userName, getRandomNumber } from './index.js';
 
 export const gamesCalc = () => {
-  console.log("What is the result of the expression?");
+  console.log('What is the result of the expression?');
 
   const getRandomOperator = () => {
-    const operators = ["+", "-", "*"];
+    const operators = ['+', '-', '*'];
     const randomOperator = Math.floor(Math.random() * operators.length);
     const operator = operators[randomOperator];
     return operator;
@@ -13,13 +13,13 @@ export const gamesCalc = () => {
   const calculateOperations = (operator, num1, num2) => {
     let result;
     switch (operator) {
-      case "+":
+      case '+':
         result = num1 + num2;
         break;
-      case "-":
+      case '-':
         result = num1 - num2;
         break;
-      case "*":
+      case '*':
         result = num1 * num2;
         break;
       default:
@@ -40,9 +40,9 @@ export const gamesCalc = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
       const [question, expectedAnswer] = getQuestionAndAnswer();
       console.log(`Question: ${question}`);
-      const myAnswer = readlineSync.question("Your answer: ");
+      const myAnswer = readlineSync.question('Your answer: ');
       if (myAnswer == expectedAnswer) {
-        console.log("Correct!");
+        console.log('Correct!');
       } else {
         console.log(
           `${myAnswer} is wrong answer ; Correct answer was ${expectedAnswer}.\nLet's try again, ${userName}!`
