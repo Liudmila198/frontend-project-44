@@ -31,7 +31,7 @@ export const gamesGcd = () => {
                 if (myAnswer == expectedAnswer) {
                   console.log("Correct!");
                 } else {
-                  console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`)
+                  console.log(`"${myAnswer}" is wrong answer ;(. Correct answer was "${expectedAnswer}".`)
                   console.log(`Let's try again, ${userName}!`)
                   break;};
               }
