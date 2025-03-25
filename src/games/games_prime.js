@@ -2,7 +2,6 @@
  import readlineSync from "readline-sync";
  import { userName, getRandomNumber } from './index.js';
 
-
 export default () => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const minRange = 0;

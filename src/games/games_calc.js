@@ -1,11 +1,11 @@
 import readlineSync from "readline-sync";
-import { userName, getRandomNumber } from './index.js';
+import { userName, getRandomNumber } from "./index.js";
 
 export const gamesCalc = () => {
-  console.log('What is the result of the expression?');
-  
+  console.log("What is the result of the expression?");
+
   const getRandomOperator = () => {
-    const operators = ['+', '-', '*'];
+    const operators = ["+", "-", "*"];
     const randomOperator = Math.floor(Math.random() * operators.length);
     const operator = operators[randomOperator];
     return operator;
@@ -13,18 +13,18 @@ export const gamesCalc = () => {
   const calculateOperations = (operator, num1, num2) => {
     let result;
     switch (operator) {
-      case '+':
+      case "+":
         result = num1 + num2;
         break;
-      case '-':
+      case "-":
         result = num1 - num2;
         break;
-      case '*':
+      case "*":
         result = num1 * num2;
         break;
       default:
         return undefined;
-    };
+    }
     return `${result}`;
   };
 
@@ -38,19 +38,19 @@ export const gamesCalc = () => {
   };
   const calcGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
-         const [question, expectedAnswer] = getQuestionAndAnswer();
-          console.log(`Question: ${question}`);
-          const myAnswer = readlineSync.question("Your answer: " );
-              if (myAnswer == expectedAnswer) {
-                console.log("Correct!");
-              } else {
-                console.log(`${myAnswer} is wrong answer ; Correct answer was ${expectedAnswer}.\nLet's try again, ${userName}!`)
-                  return;
-              };
-            }
-            console.log(`Congratulations, ${userName}!`);
-      };
+      const [question, expectedAnswer] = getQuestionAndAnswer();
+      console.log(`Question: ${question}`);
+      const myAnswer = readlineSync.question("Your answer: ");
+      if (myAnswer == expectedAnswer) {
+        console.log("Correct!");
+      } else {
+        console.log(
+          `${myAnswer} is wrong answer ; Correct answer was ${expectedAnswer}.\nLet's try again, ${userName}!`
+        );
+        return;
+      }
+    }
+    console.log(`Congratulations, ${userName}!`);
+  };
   calcGame();
-
-
 };
