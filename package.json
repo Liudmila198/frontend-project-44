@@ -10,8 +10,14 @@
   "author": "",
   "license": "ISC",
   "bin": {
+    "brain-calc": "bin/brain-calc.js",
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
+    
+
   },
   "dependencies": {
     "http-server": "^14.1.1",
@@ -21,6 +27,7 @@
     "@eslint/js": "^9.8.0",
     "eslint": "^9.8.0",
     "globals": "^15.9.0",
+    "prettier": "3.5.3",
     "typescript-eslint": "^8.0.1"
   }
 }
