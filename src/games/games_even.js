@@ -6,28 +6,27 @@ export const gamesEven = () => {
   console.log('Hello, ' + userName + '!')
 
   const getRandomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min
   }
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
-  const rightAnswer = (randomNumber) => (randomNumber % 2 === 0 ? 'yes' : 'no')
+  const rightAnswer = (randomNumber) => randomNumber % 2 === 0 ? 'yes' : 'no'
   const evenGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
-      let randomNumber = getRandomNumber(1, 100);
+      let randomNumber = getRandomNumber(1, 100)
       console.log('Question:' + ' ' + randomNumber)
       const answer = readlineSync.question('Your answer: ')
       let correctAnswer = rightAnswer(randomNumber)
       if (answer === correctAnswer) {
         console.log('Correct!')
-      } else {
-        console.log(
-          `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`
-        );
+      } 
+      else {
+        console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`)
         console.log(`Let's try again, ${userName}!`)
         return;
+      }
     }
-  }
     console.log(`Congratulations, ${userName}!`)
 }
   evenGame()
