@@ -1,4 +1,3 @@
-//#!/usr/bin/env node
 import readlineSync from 'readline-sync'
 import { userName, getRandomNumber } from './index.js'
 
@@ -34,7 +33,7 @@ export default () => {
       const myAnswer = readlineSync.question('Your answer: ')
       if (myAnswer == correctAnswer) {
         console.log('Correct!')
-      } 
+      }
       else {
         console.log(`'${myAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
         console.log(`Let's try again, ${userName}!`)
@@ -45,6 +44,3 @@ export default () => {
   }
   calcGame()
 }
-
-
-

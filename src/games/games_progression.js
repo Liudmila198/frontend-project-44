@@ -13,7 +13,7 @@ export const gamesProgression = () => {
     return progression
   }
 
-  const getRandomIndex = (data) => Math.floor(Math.random() * data.length)
+  const getRandomIndex = data => Math.floor(Math.random() * data.length)
 
   const generateRound = () => {
     const length = getRandomNumber(10, 11)
@@ -33,11 +33,11 @@ export const gamesProgression = () => {
       const myAnswer = readlineSync.question('Your answer: ')
       if (myAnswer == correctAnswer) {
         console.log('Correct!')
-      } 
+      }
       else {
         console.log(`'${myAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
         console.log(`Let's try again, ${userName}!`)
-        return;
+        return
       }
     }
     console.log(`Congratulations, ${userName}!`)

@@ -11,7 +11,7 @@ export const gamesEven = () => {
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
-  const rightAnswer = (randomNumber) => randomNumber % 2 === 0 ? 'yes' : 'no'
+  const rightAnswer = randomNumber => randomNumber % 2 === 0 ? 'yes' : 'no'
   const evenGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
       let randomNumber = getRandomNumber(1, 100)
@@ -20,16 +20,14 @@ export const gamesEven = () => {
       let correctAnswer = rightAnswer(randomNumber)
       if (answer === correctAnswer) {
         console.log('Correct!')
-      } 
+      }
       else {
         console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`)
         console.log(`Let's try again, ${userName}!`)
-        return;
+        return
       }
     }
     console.log(`Congratulations, ${userName}!`)
-}
+  }
   evenGame()
 }
-
-
