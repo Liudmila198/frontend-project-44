@@ -43,5 +43,5 @@ export const gamesProgression = () => {
     }
     console.log(`Congratulations, ${userName}!`);
   };
-  calcGame();
+  calcGame()
 };

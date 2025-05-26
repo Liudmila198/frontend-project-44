@@ -9,7 +9,7 @@ export const gamesCalc = () => {
     const randomOperator = Math.floor(Math.random() * operators.length);
     const operator = operators[randomOperator];
     return operator;
-  };
+  }
   const calculateOperations = (operator, num1, num2) => {
     let result;
     switch (operator) {
@@ -52,5 +52,5 @@ export const gamesCalc = () => {
     }
     console.log(`Congratulations, ${userName}!`);
   };
-  calcGame();
+  calcGame()
 };

@@ -10,7 +10,7 @@ export default () => {
   const isPrime = (number) => {
     const limit = Math.sqrt(number);
     if (number <= 1) {
-      return false;
+      return false
     }
     for (let i = 2; i <= limit; i += 1) {
       if (number % i === 0) {
@@ -44,5 +44,5 @@ export default () => {
     }
     console.log(`Congratulations, ${userName}!`);
   };
-  calcGame();
+  calcGame()
 };
