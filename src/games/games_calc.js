@@ -11,22 +11,22 @@ export const gamesCalc = () => {
     return operator
   }
   const calculateOperations = (operator, num1, num2) => {
-    let result;
+    let result
     switch (operator) {
       case '+':
         result = num1 + num2
-        break;
+        break
       case '-':
         result = num1 - num2
-        break;
+        break
       case '*':
         result = num1 * num2
-        break;
+        break
       default:
         return undefined
     }
     return `${result}`
-  };
+  }
 
   const getQuestionAndAnswer = () => {
     const randomOperator = getRandomOperator()
@@ -35,7 +35,7 @@ export const gamesCalc = () => {
     const question = `${num1} ${randomOperator} ${num2}`
     const expectedAnswer = calculateOperations(randomOperator, num1, num2)
     return [question, expectedAnswer]
-  };
+  }
   const calcGame = () => {
     for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
       const [question, expectedAnswer] = getQuestionAndAnswer()
@@ -43,7 +43,8 @@ export const gamesCalc = () => {
       const myAnswer = readlineSync.question('Your answer: ')
       if (myAnswer == expectedAnswer) {
         console.log('Correct!')
-      } else {
+      } 
+      else {
         console.log(
           `${myAnswer} is wrong answer ; Correct answer was ${expectedAnswer}.\nLet's try again, ${userName}!`
         )
@@ -51,6 +52,6 @@ export const gamesCalc = () => {
       }
     }
     console.log(`Congratulations, ${userName}!`)
-  };
+  }
   calcGame()
-};
+}

@@ -7,7 +7,7 @@ export const gamesGcd = () => {
 
   const gcd = (num1, num2) => {
     const smaller = Math.min(num1, num2)
-    let divisor = smaller;
+    let divisor = smaller
     for (divisor; divisor > 0; divisor -= 1) {
       if (num1 % divisor === 0 && num2 % divisor === 0) {
         return divisor;
