@@ -27,9 +27,7 @@ npm link
 
 brain-even
 
-[https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh]
-
-[![Maintainability](https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh)]
+[![asciicast](https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh.svg)](https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh)
 
 запускает игру "Калькулятор"
 
