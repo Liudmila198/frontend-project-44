@@ -16,9 +16,9 @@ export const gamesProgression = () => {
   const getRandomIndex = data => Math.floor(Math.random() * data.length)
 
   const generateRound = () => {
-    const length = getRandomNumber(10, 11)
-    const start = getRandomNumber(1, 10)
-    const step = getRandomNumber(2, 3)
+    const length = getRandomNumber(5, 10)
+    const start = getRandomNumber(1, 100)
+    const step = getRandomNumber(1, 10)
     const progression = buildProgression(length, start, step)
     const indexHiddenNumber = getRandomIndex(progression)
     const correctAnswer = progression[indexHiddenNumber].toString()

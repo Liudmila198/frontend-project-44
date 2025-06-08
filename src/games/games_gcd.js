@@ -16,8 +16,8 @@ export const gamesGcd = () => {
     return divisor
   }
   const getQuestionAndAnswer = () => {
-    const num1 = getRandomNumber(1, 100)
-    const num2 = getRandomNumber(1, 100)
+    const num1 = getRandomNumber(1, 5)
+    const num2 = getRandomNumber(6, 10)
     const anotherGameQuestion = `${num1} ${num2}`
     const expectedAnswer = gcd(num1, num2).toString()
     return [anotherGameQuestion, expectedAnswer]
