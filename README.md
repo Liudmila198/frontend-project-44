@@ -2,11 +2,11 @@
 [![Actions Status](https://github.com/Liudmila198/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Liudmila198/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bf017ac7f28224e86730/maintainability)](https://codeclimate.com/github/Liudmila198/frontend-project-44/maintainability)
 
-Описание проекта
+# Описание проекта
 
 "Игры разума" : это проект состоящий из 5 консольных игр, для тренировки вашего мозга. Каждая игра задает по 3 вопроса, на которые нужо дать правильные ответы. Если вы ответили на все вопросы, считается что вы прошли игру. В случае неправильного ответа игра завершится и вам будет предложено попробовать еще раз. Установка
 
-Проект "Игры разума":
+# Проект "Игры разума":
 
 
 Описание проекта
