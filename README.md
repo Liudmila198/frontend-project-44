@@ -24,6 +24,8 @@ npm link
 
 brain-even
 
+https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh
+
 запускает игру "Калькулятор"
 
 brain-calc
