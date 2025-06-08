@@ -17,7 +17,6 @@
 ```bash
 npm i
 
-```bash
 npm link
 
 # Инструкция по запуску:
