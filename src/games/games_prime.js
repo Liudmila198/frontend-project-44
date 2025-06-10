@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync'
-import { userName, getRandomNumber, createGame} from './index.js'
+import { getRandomNumber, createGame} from './index.js'
 
 export default () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".')

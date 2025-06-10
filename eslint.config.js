@@ -1,6 +1,6 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import airbnb from 'eslint-config-airbnb-base'; 
+import globals from 'globals'
+import pluginJs from '@eslint/js'
+import airbnb from 'eslint-config-airbnb-base'
 
 export default [
   {
@@ -8,16 +8,16 @@ export default [
       globals: {
         ...globals.browser,
       },
-      ecmaVersion: 'latest', 
+      ecmaVersion: 'latest',
       sourceType: 'module',
     },
   },
   pluginJs.configs.recommended,
-  ...airbnb, 
+  ...airbnb,
   {
     rules: {
-      'no-console': 'warn', 
-      'import/prefer-default-export': 'off', 
+      'no-console': 'warn',
+      'import/prefer-default-export': 'off',
     },
   },
-];
+]

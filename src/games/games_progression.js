@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync'
-import { userName, getRandomNumber, createGame } from './index.js'
+import { getRandomNumber, createGame } from './index.js'
 
 export const gamesProgression = () => {
   console.log('What number is missing in the progression?')

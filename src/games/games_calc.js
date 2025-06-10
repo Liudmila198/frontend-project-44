@@ -1,5 +1,5 @@
-import readlineSync from 'readline-sync'
-import { userName, getRandomNumber, createGame } from './index.js'
+//import readlineSync from 'readline-sync'
+import { getRandomNumber, createGame } from './index.js'
 
 export const gamesCalc = () => {
   console.log('What is the result of the expression?')
