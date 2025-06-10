@@ -1,4 +1,3 @@
-//import readlineSync from 'readline-sync'
 import { getRandomNumber, createGame } from './index.js'
 
 export const gamesCalc = () => {
