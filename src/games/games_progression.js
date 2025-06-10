@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync'
-import { userName, getRandomNumber } from './index.js'
+import { userName, getRandomNumber, createGame } from './index.js'
 
 export const gamesProgression = () => {
   console.log('What number is missing in the progression?')
@@ -26,21 +26,6 @@ export const gamesProgression = () => {
     const question = progression.join(' ')
     return [question, correctAnswer]
   }
-  const calcGame = () => {
-    for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
-      const [question, correctAnswer] = generateRound()
-      console.log(`Question: ${question}`)
-      const myAnswer = readlineSync.question('Your answer: ')
-      if (myAnswer == correctAnswer) {
-        console.log('Correct!')
-      }
-      else {
-        console.log(`'${myAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
-        console.log(`Let's try again, ${userName}!`)
-        return
-      }
-    }
-    console.log(`Congratulations, ${userName}!`)
-  }
-  calcGame()
+  const calcGame = createGame(generateRound, 3)
+  calcGame ()
 }

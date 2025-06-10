@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync'
-import { userName, getRandomNumber } from './index.js'
+import { userName, getRandomNumber, createGame } from './index.js'
 
 export const gamesGcd = () => {
   console.log('Find the greatest common divisor of given numbers.')
@@ -22,22 +22,6 @@ export const gamesGcd = () => {
     const expectedAnswer = gcd(num1, num2).toString()
     return [anotherGameQuestion, expectedAnswer]
   }
-
-  const calcGame = () => {
-    for (let countAnswer = 0; countAnswer < 3; countAnswer += 1) {
-      const [anotherGameQuestion, expectedAnswer] = getQuestionAndAnswer()
-      console.log(`Question: ${anotherGameQuestion}`)
-      const myAnswer = readlineSync.question('Your answer: ')
-      if (myAnswer == expectedAnswer) {
-        console.log('Correct!')
-      }
-      else {
-        console.log(`'${myAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`)
-        console.log(`Let's try again, ${userName}!`)
-        return
-      }
-    }
-    console.log(`Congratulations, ${userName}!`)
-  }
-  calcGame()
+  const calcGame = createGame(getQuestionAndAnswer, 3)
+  calcGame ()
 }

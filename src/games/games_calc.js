@@ -27,15 +27,14 @@ export const gamesCalc = () => {
     }
     return `${result}`
   }
-
   const getQuestionAndAnswer = () => {
     const randomOperator = getRandomOperator()
-    const num1 = getRandomNumber(0, 100)
-    const num2 = getRandomNumber(0, 100)
+    const num1 = getRandomNumber(0, 5)
+    const num2 = getRandomNumber(0, 5)
     const question = `${num1} ${randomOperator} ${num2}`
     const expectedAnswer = calculateOperations(randomOperator, num1, num2)
     return [question, expectedAnswer]
   }
-  const calcGame = createGame(getQuestionAndAnswer, 2)
-  //calcGame ()
+  const calcGame = createGame(getQuestionAndAnswer, 3)
+  calcGame ()
 }
