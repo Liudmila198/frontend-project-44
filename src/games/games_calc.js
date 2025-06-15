@@ -35,5 +35,5 @@ export const gamesCalc = () => {
     return [question, expectedAnswer]
   }
 
-  let calcGame = createGame(gameDescription, getQuestionAndAnswer)
+  const calcGame = createGame(gameDescription, getQuestionAndAnswer)
 }
