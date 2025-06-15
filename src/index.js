@@ -16,10 +16,11 @@ const createGame = (gameDescription, gameDataGenerator, rounds = 3) => {
     if (userAnswer !== String(correctAnswer)) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${userName}!`)
-      return false
+      return
     }
     console.log('Correct!')
+  }
   console.log(`Congratulations, ${userName}!`)
   }
-}
+
 export { getRandomNumber, createGame }
