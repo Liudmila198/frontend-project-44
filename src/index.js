@@ -21,6 +21,6 @@ const createGame = (gameDescription, gameDataGenerator, rounds = 3) => {
     console.log('Correct!')
   }
   console.log(`Congratulations, ${userName}!`)
-  }
+}
 
 export { getRandomNumber, createGame }

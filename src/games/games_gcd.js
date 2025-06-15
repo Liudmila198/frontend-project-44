@@ -21,5 +21,5 @@ export const gamesGcd = () => {
     const expectedAnswer = gcd(num1, num2).toString()
     return [anotherGameQuestion, expectedAnswer]
   }
-  const calcGame = createGame (gameDescription, getQuestionAndAnswer)
+  calcGame = createGame (gameDescription, getQuestionAndAnswer)
 }

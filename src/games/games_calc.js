@@ -34,6 +34,6 @@ export const gamesCalc = () => {
     const expectedAnswer = calculateOperations(randomOperator, num1, num2)
     return [question, expectedAnswer]
   }
-  
-  const calcGame = createGame(gameDescription, getQuestionAndAnswer)
+
+  calcGame = createGame(gameDescription, getQuestionAndAnswer)
 }
