@@ -12,7 +12,7 @@ const createGame = (gameDescription, gameDataGenerator, rounds = 3) => {
     const [question, correctAnswer] = gameDataGenerator()
     console.log(`Question: ${question}`)
     const userAnswer = readlineSync.question('Your answer: ').trim()
-    
+
     if (userAnswer !== String(correctAnswer)) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${userName}!`)

@@ -23,5 +23,5 @@ export default () => {
     const correctAnswer = isPrime(number) ? 'yes' : 'no'
     return [question, correctAnswer]
   }
-  calcGame = createGame(gameDescription, generateRound)
+  createGame(gameDescription, generateRound)
 }

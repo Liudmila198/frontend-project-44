@@ -25,5 +25,5 @@ export const gamesProgression = () => {
     const question = progression.join(' ')
     return [question, correctAnswer]
   }
-  calcGame = createGame(gameDescription, generateRound)
+  createGame(gameDescription, generateRound)
 }
