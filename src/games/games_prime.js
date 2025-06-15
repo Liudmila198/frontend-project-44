@@ -1,7 +1,7 @@
-import { getRandomNumber, createGame } from './index.js'
+import { getRandomNumber, createGame } from '../index.js'
 
 export default () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
+  const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".'
   const minRange = 0
   const maxRange = 100
 
@@ -23,6 +23,5 @@ export default () => {
     const correctAnswer = isPrime(number) ? 'yes' : 'no'
     return [question, correctAnswer]
   }
-  const calcGame = createGame(generateRound, 3)
-  calcGame ()
+  const calcGame = createGame(gameDescription, generateRound)
 }

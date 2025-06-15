@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { getRandomNumber, createGame } from './index.js'
+import { getRandomNumber, createGame } from '../index.js'
 
 export const gamesProgression = () => {
-  console.log('What number is missing in the progression?')
+  const gameDescription = 'What number is missing in the progression?'
 
   const buildProgression = (length, start, step) => {
     const progression = []
@@ -25,6 +25,5 @@ export const gamesProgression = () => {
     const question = progression.join(' ')
     return [question, correctAnswer]
   }
-  const calcGame = createGame(generateRound, 3)
-  calcGame ()
+  const calcGame = createGame(gameDescription, generateRound)
 }

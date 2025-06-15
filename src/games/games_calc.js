@@ -1,7 +1,7 @@
-import { getRandomNumber, createGame } from './index.js'
+import { getRandomNumber, createGame } from '../index.js'
 
 export const gamesCalc = () => {
-  console.log('What is the result of the expression?')
+  const gameDescription = 'What is the result of the expression?'
 
   const getRandomOperator = () => {
     const operators = ['+', '-', '*']
@@ -28,12 +28,12 @@ export const gamesCalc = () => {
   }
   const getQuestionAndAnswer = () => {
     const randomOperator = getRandomOperator()
-    const num1 = getRandomNumber(0, 5)
-    const num2 = getRandomNumber(0, 5)
+    const num1 = getRandomNumber(10, 5)
+    const num2 = getRandomNumber(5, 0)
     const question = `${num1} ${randomOperator} ${num2}`
     const expectedAnswer = calculateOperations(randomOperator, num1, num2)
     return [question, expectedAnswer]
   }
-  const calcGame = createGame(getQuestionAndAnswer, 3)
-  calcGame ()
+  
+  const calcGame = createGame(gameDescription, getQuestionAndAnswer)
 }

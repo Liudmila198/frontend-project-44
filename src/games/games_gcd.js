@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { getRandomNumber, createGame } from './index.js'
+import { getRandomNumber, createGame } from '../index.js'
 
 export const gamesGcd = () => {
-  console.log('Find the greatest common divisor of given numbers.')
+  const gameDescription = 'Find the greatest common divisor of given numbers.'
 
   const gcd = (num1, num2) => {
     const smaller = Math.min(num1, num2)
@@ -21,6 +21,5 @@ export const gamesGcd = () => {
     const expectedAnswer = gcd(num1, num2).toString()
     return [anotherGameQuestion, expectedAnswer]
   }
-  const calcGame = createGame(getQuestionAndAnswer, 3)
-  calcGame ()
+  const calcGame = createGame (gameDescription, getQuestionAndAnswer)
 }
