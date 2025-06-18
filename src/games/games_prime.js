@@ -1,6 +1,6 @@
 import { getRandomNumber, createGame } from '../index.js'
 
-export default () => {
+export const gamesPrime = () => {
   const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".'
   const minRange = 0
   const maxRange = 100

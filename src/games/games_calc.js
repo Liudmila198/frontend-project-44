@@ -13,18 +13,14 @@ export const gamesCalc = () => {
     let result
     switch (operator) {
       case '+':
-        result = num1 + num2
-        break
+        return num1 + num2
       case '-':
-        result = num1 - num2
-        break
+        return num1 - num2
       case '*':
-        result = num1 * num2
-        break
+        return num1 * num2
       default:
         return undefined
     }
-    return `${result}`
   }
   const getQuestionAndAnswer = () => {
     const randomOperator = getRandomOperator()
